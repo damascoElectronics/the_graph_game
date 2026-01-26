@@ -1,0 +1,14 @@
+# Crontab para ejecutar GitHub Graph Builder
+# Ejecuta el script cada hora de 18:00 a 22:00, de lunes a viernes
+# 
+# Formato: minuto hora día-mes día-semana comando
+# día-semana: 1-5 = lunes a viernes
+
+# Ejecutar a las 18:00, 19:00, 20:00, 21:00, 22:00 (Lunes-Viernes)
+0 18-22 * * 1-5 /bin/bash $HOME/github-graph-auto.sh
+
+# Alternativa: ejecutar cada 30 minutos entre 18:00-22:00
+# */30 18-22 * * 1-5 /bin/bash $HOME/github-graph-auto.sh
+
+# Alternativa: ejecutar cada 15 minutos entre 18:00-22:00
+# */15 18-22 * * 1-5 /bin/bash $HOME/github-graph-auto.sh
